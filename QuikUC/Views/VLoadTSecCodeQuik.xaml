@@ -1,0 +1,76 @@
+﻿<mah:MetroWindow x:Class="QuikUC.Views.VLoadTSecCodeQuik"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:prism="http://prismlibrary.com/"          
+            xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+            xmlns:constants="clr-namespace:QuikUC.Constants"
+            prism:ViewModelLocator.AutoWireViewModel="True"
+            Title="{Binding Title}">
+  <Window.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/QuikUC;component/Resource/Styles0.xaml"/>
+      </ResourceDictionary.MergedDictionaries>
+  
+      <Style  TargetType="TextBlock" BasedOn="{StaticResource StVdBlock}">
+        <Setter Property="Foreground" Value="Azure"/>
+        <Setter Property="Margin" Value="1"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+      </Style>
+
+      <Style x:Key="TBRight"  TargetType="TextBlock">
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+      </Style>
+
+      <Style TargetType="TextBox"  BasedOn="{StaticResource StVdBox}" >
+        <Setter Property="BorderBrush" Value="{x:Null}"/>
+      </Style>
+
+      <Style TargetType="RadioButton">
+        <Setter Property="Margin" Value="10, 5, 50, 5" />
+      </Style>
+
+    </ResourceDictionary>
+  </Window.Resources>
+
+  <Border Style="{StaticResource Border100}">
+    <DockPanel LastChildFill="True">
+      <DockPanel Dock="Top">
+        <Border Style="{StaticResource Border50}">
+          <TextBlock Text="{Binding Name}" FontSize="25" 
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"/>
+
+        </Border>
+      </DockPanel>
+      <DockPanel Dock="Bottom">
+        <TextBlock Text="--- сообщение  ---" FontSize="15"/>
+      </DockPanel>
+      <DockPanel Dock="Left">
+        <Border Style="{StaticResource Border50}">
+          <GroupBox Padding="4">
+            <GroupBox.Header>
+              <TextBlock Text="Выбор класса"/>
+            </GroupBox.Header>
+            <ListBox 
+              HorizontalContentAlignment="Left"
+              VerticalContentAlignment="Top"
+              VerticalAlignment="Top"
+              ItemsSource="{Binding LsIsCheck}"
+              SelectedItem="{Binding SelectT}"
+              
+              ScrollViewer.HorizontalScrollBarVisibility="Auto"
+              ScrollViewer.VerticalScrollBarVisibility="Auto">
+            </ListBox>
+          </GroupBox>
+        </Border>
+      </DockPanel>
+      <DockPanel Dock="Right">
+      </DockPanel>
+      <ContentControl prism:RegionManager.RegionName="{x:Static constants:NameRegions.VLoadSecCodeFromClass}"/>
+
+    </DockPanel>
+  </Border>
+</mah:MetroWindow>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34321.82
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUC", "TestUC.csproj", "{8DF7E395-91AA-4A64-AC55-BF93BA913EE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuikUC", "..\QuikUC\QuikUC.csproj", "{F66180BC-D94A-44FC-9B31-BAA93B2EC02D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DF7E395-91AA-4A64-AC55-BF93BA913EE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DF7E395-91AA-4A64-AC55-BF93BA913EE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DF7E395-91AA-4A64-AC55-BF93BA913EE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DF7E395-91AA-4A64-AC55-BF93BA913EE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F66180BC-D94A-44FC-9B31-BAA93B2EC02D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F66180BC-D94A-44FC-9B31-BAA93B2EC02D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F66180BC-D94A-44FC-9B31-BAA93B2EC02D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F66180BC-D94A-44FC-9B31-BAA93B2EC02D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {56587FBD-4EE3-4F92-88FD-8DC3880B9FA2}
+	EndGlobalSection
+EndGlobal
