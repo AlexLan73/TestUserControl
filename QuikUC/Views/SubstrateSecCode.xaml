@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="QuikUC.Views.SubstrateSecCode"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"         
+             xmlns:constants="clr-namespace:QuikUC.Constants"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid>
+      <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
+        <TextBlock Text="--- Test ---"></TextBlock>
+        <ContentControl prism:RegionManager.RegionName="{x:Static constants:NameRegions.VLoadSecCodeFromClass}"/>
+
+</StackPanel>            
+    </Grid>
+</UserControl>

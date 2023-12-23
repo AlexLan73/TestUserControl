@@ -69,7 +69,7 @@
       </DockPanel>
       <DockPanel Dock="Right">
       </DockPanel>
-      <ContentControl prism:RegionManager.RegionName="{x:Static constants:NameRegions.VLoadSecCodeFromClass}"/>
+      <ContentControl prism:RegionManager.RegionName="{x:Static constants:NameRegions.SubstrateSecCode}"/>
 
     </DockPanel>
   </Border>

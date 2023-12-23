@@ -71,7 +71,7 @@ public class VLoadTSecCodeQuikViewModel : ReactiveObject
   private readonly IRegionManager _region;
   private readonly IContainerProvider _container;
   private readonly IEventAggregator _ea;
-
+  private VLoadTSecCodeQuik _vLoadTSecCodeQuik;
 
   public VLoadTSecCodeQuikViewModel(IRegionManager regionManager, IContainerProvider containerProvider, IEventAggregator ea)
   {
@@ -97,15 +97,24 @@ public class VLoadTSecCodeQuikViewModel : ReactiveObject
           switch (t)
           {
             case "SPBFUT":
-              _region.RequestNavigate(NameRegions.VLoadSecCodeFromClass, nameof(VSPBFUT));
+              NavigationParameters keyValuePairs = new NavigationParameters();
+              keyValuePairs.Add("pole", nameof(VSPBFUT));
+              _region.RequestNavigate(NameRegions.SubstrateSecCode, nameof(SubstrateSecCode), keyValuePairs);
+
+//              RegionManager.SetRegionManager(_vLoadTSecCodeQuik, _region);
+//              RegionManager.UpdateRegions();
               break;
 
             case "QJSIM":
-              _region.RequestNavigate(NameRegions.VLoadSecCodeFromClass, nameof(VQJSIM));
+              NavigationParameters keyValuePairs1 = new NavigationParameters();
+              keyValuePairs1.Add("pole", nameof(VQJSIM));
+              _region.RequestNavigate(NameRegions.SubstrateSecCode, nameof(SubstrateSecCode), keyValuePairs1);
               break;
 
             default:
-              _region.RequestNavigate(NameRegions.VLoadSecCodeFromClass, nameof(VRestClass));
+              NavigationParameters keyValuePairs2 = new NavigationParameters();
+              keyValuePairs2.Add("pole", nameof(VRestClass));
+              _region.RequestNavigate(NameRegions.SubstrateSecCode, nameof(SubstrateSecCode), keyValuePairs2);
               break;
           }
 
@@ -121,5 +130,8 @@ public class VLoadTSecCodeQuikViewModel : ReactiveObject
     DClass.AddOrUpdate(list);
   }
 
-
+  internal void SetParam(VLoadTSecCodeQuik vLoadTSecCodeQuik)
+  {
+    _vLoadTSecCodeQuik = vLoadTSecCodeQuik;
+  }
 }
